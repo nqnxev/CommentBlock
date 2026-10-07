@@ -1,6 +1,6 @@
 # CommentBlock
 
-[Polski](README.pl.md)
+[Język polski](README.pl.md)
 
 CommentBlock is a Chromium extension for filtering low-value comments on YouTube. It can hide comments that are too short or consist mainly of generic praise, while keeping the filtering rules fully configurable.
 
