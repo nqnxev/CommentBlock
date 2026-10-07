@@ -1,0 +1,380 @@
+{
+  "extName": {
+    "message": "CommentBlock"
+  },
+  "extDescription": {
+    "message": "Filters short and low-content praise comments on YouTube; supports large local lists, URL/file lists, optional reply filtering, badge counter, global counter, collapse mode and Pause/Resume."
+  },
+  "actionTitle": {
+    "message": "CommentBlock — hidden comments count"
+  },
+  "optionsTitle": {
+    "message": "CommentBlock — settings"
+  },
+  "popupTitle": {
+    "message": "CommentBlock"
+  },
+  "privacyIntro": {
+    "message": "Filtering runs locally in your browser. Comment text is not sent to any service."
+  },
+  "languageTitle": {
+    "message": "Interface language"
+  },
+  "languageDesc": {
+    "message": "Automatic follows Chromium UI language. Polish is used for Polish Chromium; English is used for other languages."
+  },
+  "languageAuto": {
+    "message": "Automatic (browser language)"
+  },
+  "languagePolish": {
+    "message": "Polski"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageImmediate": {
+    "message": "Changing the language takes effect immediately."
+  },
+  "enableExtension": {
+    "message": "Enable extension"
+  },
+  "masterSwitchDesc": {
+    "message": "Master switch for all filters."
+  },
+  "hideShort": {
+    "message": "Hide comments that are too short"
+  },
+  "hideShortDesc": {
+    "message": "Unicode characters are counted after trimming leading and trailing whitespace."
+  },
+  "minChars": {
+    "message": "Minimum number of characters"
+  },
+  "filterPraise": {
+    "message": "Filter praise / sycophantic comments"
+  },
+  "filterPraiseDesc": {
+    "message": "A comment is filtered after reaching the configured number of independent matches from the word and phrase lists."
+  },
+  "praiseThreshold": {
+    "message": "Minimum praise matches required to hide"
+  },
+  "thresholdAria": {
+    "message": "Match threshold — slider from 1 to 15"
+  },
+  "thresholdLabel": {
+    "message": "Threshold"
+  },
+  "moreSensitive": {
+    "message": "1 — more sensitive"
+  },
+  "moreCautious": {
+    "message": "15 — more cautious"
+  },
+  "thresholdHint": {
+    "message": "The threshold is literal: at <strong>1</strong>, one independent list match is enough to hide a comment; at <strong>2</strong>, two are required, and so on. The slider covers 1–15; the number field can be set manually up to 999."
+  },
+  "mainPraiseList": {
+    "message": "Main praise word/phrase list — one rule per line"
+  },
+  "localStorageHint": {
+    "message": "The list is stored locally, so it is not subject to the 8 KB per-item sync-storage limit."
+  },
+  "readyListsTitle": {
+    "message": "Ready-made phrase lists"
+  },
+  "readyListsDesc": {
+    "message": "Add text lists by URL or load <code>.txt</code> files. They are merged with the main list while filtering."
+  },
+  "externalUrlsLabel": {
+    "message": "External list URLs — one URL per line"
+  },
+  "externalUrlsPlaceholder": {
+    "message": "https://example.org/youtube-praise-list.txt\n# lines beginning with # or ! are ignored"
+  },
+  "refreshLists": {
+    "message": "Download / update lists"
+  },
+  "importList": {
+    "message": "Load list from file…"
+  },
+  "urlLists": {
+    "message": "URL lists"
+  },
+  "fileLists": {
+    "message": "File lists"
+  },
+  "noDownloadedLists": {
+    "message": "No downloaded lists."
+  },
+  "noImportedFiles": {
+    "message": "No imported files."
+  },
+  "listFormatHint": {
+    "message": "List format is simple: one phrase or rule per line, <code>*</code> marks a word stem, and lines beginning with <code>#</code> or <code>!</code> are comments. URL lists are updated manually with the button above; if downloading fails, the last valid cached copy remains active."
+  },
+  "listHelpSummary": {
+    "message": "How do I create phrase and keyword lists?"
+  },
+  "listHelpP1": {
+    "message": "Each line is a separate trigger. It can be one word, e.g. <code>super</code>, or a phrase, e.g. <code>great job</code>."
+  },
+  "listHelpP2": {
+    "message": "<strong>An asterisk <code>*</code> at the end of a word matches the beginning of that word.</strong> For example, <code>amaz*</code> matches <code>amazing</code>, <code>amazingly</code>, etc. It also works inside phrases. A plain entry such as <code>super</code> still means a whole word and will not match <code>supermarket</code>."
+  },
+  "listHelpP3": {
+    "message": "Matching is case-insensitive and ignores Polish diacritics. Lines starting with <code>#</code> or <code>!</code> are ignored, as are section headers in square brackets such as <code>[My list]</code>."
+  },
+  "listHelpP4": {
+    "message": "The threshold defines how many independent list matches are required to hide a comment. At threshold <code>1</code>, one detected word or phrase is enough; at threshold <code>3</code>, at least three independent matches are required. Overlapping rules are not double-counted — for example, with <code>great*</code> and <code>great* video</code>, “great video” counts as one longer match."
+  },
+  "listHelpP5": {
+    "message": "The slider provides quick values from 1 to 15. The number field can set a larger threshold manually (up to 999). If you enter <code>20</code>, the slider remains visually at 15 but the saved and used threshold is 20."
+  },
+  "listHelpP6": {
+    "message": "Prefer stems with at least 4–5 letters. Very short stems can match many unrelated words and create false positives."
+  },
+  "defaultListHint": {
+    "message": "The default list is broad and tuned for threshold <strong>2</strong>: it contains more than 800 Polish and English signals of praise, gratitude, loyalty, “easy to listen/watch” phrases, praise of expertise/quality, and wildcard stems. Short comments with only one signal are still handled by the minimum-length filter."
+  },
+  "filterReplies": {
+    "message": "Filter replies to comments"
+  },
+  "filterRepliesDesc": {
+    "message": "Off by default. When enabled, expanded replies are filtered using the same rules as top-level comments."
+  },
+  "filterRepliesHint": {
+    "message": "When disabled, the extension ignores replies even after you expand them. This does not affect filtering of the parent comment."
+  },
+  "collapseFiltered": {
+    "message": "Collapse filtered comments like spoilers"
+  },
+  "collapseFilteredDesc": {
+    "message": "Instead of removing a filtered comment from view, shows a compact bar with a “Show comment” button. Applies to the length and praise filters."
+  },
+  "collapseHelpSummary": {
+    "message": "How does collapse mode work?"
+  },
+  "collapseHelpP1": {
+    "message": "This option <strong>does not detect story spoilers</strong>. It only changes how comments already matched by the minimum-length or praise filter are presented."
+  },
+  "collapseHelpP2": {
+    "message": "When disabled, a filtered comment disappears. When enabled, a small bar remains in its place with the reason and a <strong>“Show comment”</strong> button."
+  },
+  "collapseHelpP3": {
+    "message": "After revealing the comment, the button changes to <strong>“Collapse comment”</strong>, so it can be shown and hidden repeatedly, similar to spoiler blocks on forums."
+  },
+  "save": {
+    "message": "Save"
+  },
+  "resetDefaults": {
+    "message": "Restore defaults"
+  },
+  "pause": {
+    "message": "Pause"
+  },
+  "resume": {
+    "message": "Resume"
+  },
+  "disabled": {
+    "message": "Disabled"
+  },
+  "filterActive": {
+    "message": "Filtering active"
+  },
+  "filterPaused": {
+    "message": "Filtering paused"
+  },
+  "disabledInSettings": {
+    "message": "Extension is disabled in settings"
+  },
+  "pauseDisabledHint": {
+    "message": "The Pause button does not change the master switch. Enable the extension in Settings."
+  },
+  "pausePausedHint": {
+    "message": "Comments are currently shown without filtering. Click to resume."
+  },
+  "pauseActiveHint": {
+    "message": "Click to immediately show all filtered comments."
+  },
+  "resumeTitle": {
+    "message": "Resume filtering"
+  },
+  "pauseTitle": {
+    "message": "Pause filtering"
+  },
+  "disabledTitle": {
+    "message": "The extension is disabled in settings"
+  },
+  "globalBlockedLabel": {
+    "message": "comments blocked since installation"
+  },
+  "globalBlockedTitle": {
+    "message": "Total comments filtered by CommentBlock since counting began"
+  },
+  "settingsButton": {
+    "message": "Settings…"
+  },
+  "summaryMasterOff": {
+    "message": "The extension master switch is off."
+  },
+  "summaryPaused": {
+    "message": "Pause does not change filter settings — they return to their previous state when resumed."
+  },
+  "summaryNoRules": {
+    "message": "No filtering rules are active."
+  },
+  "summaryActivePrefix": {
+    "message": "Active: "
+  },
+  "summaryCollapsed": {
+    "message": " Filtered comments are collapsed."
+  },
+  "summaryMin": {
+    "message": "minimum {0} characters"
+  },
+  "summaryPraise": {
+    "message": "praise (threshold {0} matches)"
+  },
+  "thresholdEvery": {
+    "message": "{0} — every single match is enough"
+  },
+  "thresholdVeryHigh": {
+    "message": "{0} — very high sensitivity"
+  },
+  "thresholdHigh": {
+    "message": "{0} — high sensitivity"
+  },
+  "thresholdMedium": {
+    "message": "{0} — medium sensitivity"
+  },
+  "thresholdLow": {
+    "message": "{0} — low sensitivity"
+  },
+  "thresholdVeryLow": {
+    "message": "{0} — very low sensitivity"
+  },
+  "thresholdManual": {
+    "message": "{0} — manual threshold (above slider range)"
+  },
+  "oneRule": {
+    "message": "1 rule"
+  },
+  "manyRules": {
+    "message": "{0} rules"
+  },
+  "never": {
+    "message": "never"
+  },
+  "noConfiguredUrls": {
+    "message": "No URL lists configured."
+  },
+  "notDownloadedYet": {
+    "message": "This list has not been downloaded yet."
+  },
+  "rulesUpdated": {
+    "message": "{0} • updated: {1}"
+  },
+  "toggleList": {
+    "message": "Enable / disable this list"
+  },
+  "enableNamedList": {
+    "message": "Enable list {0}"
+  },
+  "remove": {
+    "message": "Remove"
+  },
+  "unnamedList": {
+    "message": "Unnamed list"
+  },
+  "rulesImported": {
+    "message": "{0} • loaded: {1}"
+  },
+  "listRemoved": {
+    "message": "Loaded list removed."
+  },
+  "savedOk": {
+    "message": "Saved. Large lists are stored locally without the 8 KB per-item limit."
+  },
+  "saveInvalidUrl": {
+    "message": "Not saved: invalid list URL: {0}"
+  },
+  "saveError": {
+    "message": "Save error: {0}"
+  },
+  "resetOk": {
+    "message": "Default settings restored and additional lists removed."
+  },
+  "resetError": {
+    "message": "Could not restore defaults: {0}"
+  },
+  "invalidUrl": {
+    "message": "Invalid URL: {0}"
+  },
+  "noUrlsToDownload": {
+    "message": "No list URLs to download."
+  },
+  "downloadingLists": {
+    "message": "Downloading lists…"
+  },
+  "permissionDenied": {
+    "message": "Access to external-list domains was not granted."
+  },
+  "downloadTimeout": {
+    "message": "Download timed out."
+  },
+  "downloadError": {
+    "message": "Download error"
+  },
+  "updatedLists": {
+    "message": "Updated {0} lists."
+  },
+  "updatedListsWithErrors": {
+    "message": "Updated {0}; errors: {1}. Previous cached copies were kept when available."
+  },
+  "genericError": {
+    "message": "Error: {0}"
+  },
+  "fileTooLarge": {
+    "message": "file exceeds 5 MB"
+  },
+  "fileEmpty": {
+    "message": "file is empty"
+  },
+  "fileReadError": {
+    "message": "read error"
+  },
+  "importedOne": {
+    "message": "Loaded {0} list."
+  },
+  "importedMany": {
+    "message": "Loaded {0} lists."
+  },
+  "importedWithErrors": {
+    "message": "Loaded {0}; errors: {1}"
+  },
+  "listTooLarge": {
+    "message": "list exceeds 5 MB"
+  },
+  "emptyList": {
+    "message": "empty list"
+  },
+  "hiddenLength": {
+    "message": "Comment hidden by length filter"
+  },
+  "hiddenPraise": {
+    "message": "Comment hidden by praise filter"
+  },
+  "hiddenGeneric": {
+    "message": "Comment hidden by filter"
+  },
+  "showComment": {
+    "message": "Show comment"
+  },
+  "collapseComment": {
+    "message": "Collapse comment"
+  },
+  "expandedSuffix": {
+    "message": " — expanded"
+  }
+}

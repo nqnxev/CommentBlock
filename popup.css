@@ -1,0 +1,61 @@
+:root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+body { margin: 0; min-width: 310px; background: Canvas; color: CanvasText; }
+main { padding: 17px; }
+h1 { font-size: 18px; margin: 0 0 16px; text-align: center; }
+
+.pause-section { display: flex; flex-direction: column; align-items: center; gap: 7px; padding: 4px 0 8px; }
+.pause-button {
+  width: 104px;
+  height: 104px;
+  border: 0;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  background: #d93025;
+  color: #fff;
+  box-shadow: 0 5px 16px rgba(0,0,0,.22);
+  transition: transform .12s ease, filter .12s ease, background .12s ease;
+}
+.pause-button:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.pause-button:active { transform: translateY(1px) scale(.985); }
+.pause-button:focus-visible { outline: 3px solid #4d90fe; outline-offset: 3px; }
+.pause-button.is-paused { background: #17843b; }
+.pause-button.is-disabled { background: #777; }
+.pause-icon { font-size: 39px; line-height: .9; font-weight: 800; letter-spacing: -7px; transform: translateX(-3px); }
+.pause-button.is-paused .pause-icon { letter-spacing: 0; transform: none; font-size: 35px; }
+.pause-label { font-size: 13px; font-weight: 750; }
+.global-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 4px 0 2px;
+  padding: 9px 10px 8px;
+  box-sizing: border-box;
+  border-top: 1px solid color-mix(in srgb, CanvasText 12%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, CanvasText 12%, transparent);
+}
+.global-counter-value {
+  font-variant-numeric: tabular-nums;
+  font-size: 27px;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -.4px;
+}
+.global-counter-label {
+  margin-top: 3px;
+  font-size: 11px;
+  line-height: 1.3;
+  text-align: center;
+  opacity: .68;
+}
+.pause-status { font-size: 14px; text-align: center; }
+.pause-hint { min-height: 34px; max-width: 270px; text-align: center; font-size: 11px; line-height: 1.4; opacity: .68; }
+.summary { font-size: 12px; line-height: 1.45; color: color-mix(in srgb, CanvasText 68%, transparent); min-height: 34px; margin: 8px 0 12px; }
+.options-button { width: 100%; border: 0; border-radius: 8px; padding: 9px 12px; font: inherit; font-weight: 650; cursor: pointer; background: color-mix(in srgb, CanvasText 12%, Canvas); color: CanvasText; }
+.options-button:hover { background: color-mix(in srgb, CanvasText 18%, Canvas); }

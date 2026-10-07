@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" data-i18n-title="popupTitle">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CommentBlock</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>CommentBlock</h1>
+
+    <section class="pause-section" aria-labelledby="pause-status">
+      <button id="pauseButton" class="pause-button" type="button" aria-pressed="false" data-i18n-title="pauseTitle" title="Pause filtering">
+        <span id="pauseIcon" class="pause-icon" aria-hidden="true">Ⅱ</span>
+        <span id="pauseLabel" class="pause-label" data-i18n="pause">Pause</span>
+      </button>
+
+      <div class="global-counter" data-i18n-title="globalBlockedTitle" title="Total comments filtered by CommentBlock since counting began">
+        <span id="globalBlockedCount" class="global-counter-value">0</span>
+        <span class="global-counter-label" data-i18n="globalBlockedLabel">comments blocked since installation</span>
+      </div>
+
+      <strong id="pause-status" class="pause-status" data-i18n="filterActive">Filtering active</strong>
+      <span id="pauseHint" class="pause-hint" data-i18n="pauseActiveHint">Click to immediately show all filtered comments.</span>
+    </section>
+
+    <p id="summary" class="summary"></p>
+    <button id="options" class="options-button" type="button" data-i18n="settingsButton">Settings…</button>
+  </main>
+  <script src="localization.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

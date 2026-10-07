@@ -1,0 +1,380 @@
+{
+  "extName": {
+    "message": "CommentBlock"
+  },
+  "extDescription": {
+    "message": "Filtruje krótkie i pochwalne komentarze na YouTube; obsługuje duże listy lokalne, listy z URL/plików, opcjonalne filtrowanie odpowiedzi, badge, licznik globalny, tryb zwijania i Pauza/Wznów."
+  },
+  "actionTitle": {
+    "message": "CommentBlock — liczba ukrytych komentarzy"
+  },
+  "optionsTitle": {
+    "message": "CommentBlock — ustawienia"
+  },
+  "popupTitle": {
+    "message": "CommentBlock"
+  },
+  "privacyIntro": {
+    "message": "Filtr działa lokalnie w przeglądarce. Nie wysyła treści komentarzy do żadnej usługi."
+  },
+  "languageTitle": {
+    "message": "Język interfejsu"
+  },
+  "languageDesc": {
+    "message": "Tryb automatyczny korzysta z języka interfejsu Chromium. Dla polskiego Chromium używany jest polski, a dla pozostałych języków angielski."
+  },
+  "languageAuto": {
+    "message": "Automatyczny (język przeglądarki)"
+  },
+  "languagePolish": {
+    "message": "Polski"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageImmediate": {
+    "message": "Zmiana języka działa natychmiast."
+  },
+  "enableExtension": {
+    "message": "Włącz rozszerzenie"
+  },
+  "masterSwitchDesc": {
+    "message": "Główny przełącznik wszystkich filtrów."
+  },
+  "hideShort": {
+    "message": "Ukrywaj zbyt krótkie komentarze"
+  },
+  "hideShortDesc": {
+    "message": "Liczone są znaki Unicode po usunięciu spacji z początku i końca."
+  },
+  "minChars": {
+    "message": "Minimalna liczba znaków"
+  },
+  "filterPraise": {
+    "message": "Filtruj komentarze pochwalne / pochlebcze"
+  },
+  "filterPraiseDesc": {
+    "message": "Komentarz jest odfiltrowywany po osiągnięciu ustawionego progu niezależnych trafień z listy słów i fraz."
+  },
+  "praiseThreshold": {
+    "message": "Minimalna liczba trafień pochwalnych potrzebna do ukrycia"
+  },
+  "thresholdAria": {
+    "message": "Próg trafień — suwak od 1 do 15"
+  },
+  "thresholdLabel": {
+    "message": "Próg"
+  },
+  "moreSensitive": {
+    "message": "1 — bardziej czuły"
+  },
+  "moreCautious": {
+    "message": "15 — bardziej ostrożny"
+  },
+  "thresholdHint": {
+    "message": "Próg jest literalny: przy wartości <strong>1</strong> już jedno niezależne trafienie z listy wystarcza do ukrycia komentarza; przy <strong>2</strong> potrzebne są dwa itd. Suwak obejmuje zakres 1–15, a w polu obok można ręcznie wpisać wartość do 999."
+  },
+  "mainPraiseList": {
+    "message": "Główna lista fraz i słów pochwalnych — jedno na linię"
+  },
+  "localStorageHint": {
+    "message": "Lista jest zapisywana lokalnie, więc nie obowiązuje jej limit 8 KB pamięci synchronizowanej."
+  },
+  "readyListsTitle": {
+    "message": "Gotowe listy fraz"
+  },
+  "readyListsDesc": {
+    "message": "Możesz dodać listy tekstowe z adresów URL albo wczytać pliki <code>.txt</code>. Są łączone z główną listą podczas filtrowania."
+  },
+  "externalUrlsLabel": {
+    "message": "Adresy list zewnętrznych — jeden URL na linię"
+  },
+  "externalUrlsPlaceholder": {
+    "message": "https://example.org/youtube-praise-list.txt\n# linie zaczynające się od # lub ! są ignorowane"
+  },
+  "refreshLists": {
+    "message": "Pobierz / aktualizuj listy"
+  },
+  "importList": {
+    "message": "Wczytaj listę z pliku…"
+  },
+  "urlLists": {
+    "message": "Listy z URL"
+  },
+  "fileLists": {
+    "message": "Listy z plików"
+  },
+  "noDownloadedLists": {
+    "message": "Brak pobranych list."
+  },
+  "noImportedFiles": {
+    "message": "Brak wczytanych plików."
+  },
+  "listFormatHint": {
+    "message": "Format list jest prosty: jedna fraza lub reguła na linię, <code>*</code> oznacza rdzeń słowa, a linie rozpoczynające się od <code>#</code> lub <code>!</code> są komentarzami. Listy z URL są aktualizowane ręcznie przyciskiem powyżej; przy błędzie pobierania ostatnia poprawna kopia pozostaje aktywna."
+  },
+  "listHelpSummary": {
+    "message": "Jak tworzyć listę fraz i słów kluczowych?"
+  },
+  "listHelpP1": {
+    "message": "Każdy wiersz jest osobnym wyzwalaczem. Może to być pojedyncze słowo, np. <code>super</code>, albo fraza, np. <code>świetna robota</code>."
+  },
+  "listHelpP2": {
+    "message": "<strong>Gwiazdka <code>*</code> na końcu słowa oznacza dopasowanie jego początku.</strong> Przykład: <code>niesamowit*</code> wykryje m.in. <code>niesamowity</code>, <code>niesamowita</code>, <code>niesamowite</code> i <code>niesamowitego</code>. Można jej używać również we frazach, np. <code>świetn* robota</code>. Zwykłe <code>super</code> nadal oznacza pełne słowo i nie dopasuje np. <code>supermarket</code>."
+  },
+  "listHelpP3": {
+    "message": "Dopasowanie nie rozróżnia wielkości liter ani polskich znaków: <code>ŚWIETNY</code>, <code>świetny</code> i <code>swietny</code> są traktowane tak samo. Wiersze zaczynające się od <code>#</code> lub <code>!</code> są ignorowane; ignorowane są też nagłówki w nawiasach kwadratowych, np. <code>[My list]</code>."
+  },
+  "listHelpP4": {
+    "message": "Próg ustala, ile niezależnych trafień z listy potrzeba do ukrycia komentarza. Przy progu <code>1</code> pojedyncze wykryte słowo lub fraza wystarcza; przy progu <code>3</code> komentarz musi zawierać co najmniej trzy niezależne trafienia. Nakładające się reguły nie są liczone podwójnie — np. przy wpisach <code>świetn*</code> oraz <code>świetn* film</code> tekst „świetny film” daje jedno, dłuższe trafienie."
+  },
+  "listHelpP5": {
+    "message": "Suwak służy do szybkiego ustawienia wartości 1–15. Pole liczbowe obok pozwala wpisać większy próg ręcznie (do 999). Jeżeli wpiszesz np. <code>20</code>, suwak pozostanie na swoim skrajnym położeniu 15, ale rzeczywiście zapisany i używany będzie próg 20."
+  },
+  "listHelpP6": {
+    "message": "Najlepiej używać rdzeni liczących co najmniej 4–5 liter, np. <code>fantastyczn*</code>, <code>rewelacj*</code>. Zbyt krótki rdzeń, np. <code>do*</code>, będzie pasował do bardzo wielu niezwiązanych słów i może powodować fałszywe trafienia."
+  },
+  "defaultListHint": {
+    "message": "Domyślna lista jest szeroka i zoptymalizowana pod próg <strong>2</strong>: obejmuje ponad 800 polskich i angielskich sygnałów pochwały, formuł wdzięczności, lojalności, „dobrze się słucha/ogląda”, pochwał wiedzy i jakości oraz rdzeni z <code>*</code>. Krótkie komentarze z jednym sygnałem nadal przejmuje filtr minimalnej długości."
+  },
+  "filterReplies": {
+    "message": "Filtruj odpowiedzi na komentarze"
+  },
+  "filterRepliesDesc": {
+    "message": "Domyślnie wyłączone. Po włączeniu odpowiedzi rozwijane pod komentarzami są filtrowane tymi samymi regułami co komentarze główne."
+  },
+  "filterRepliesHint": {
+    "message": "Gdy opcja jest wyłączona, rozszerzenie ignoruje odpowiedzi nawet po ich rozwinięciu. Nie wpływa to na filtrowanie komentarza nadrzędnego."
+  },
+  "collapseFiltered": {
+    "message": "Zwijaj odfiltrowane komentarze jako spoiler"
+  },
+  "collapseFilteredDesc": {
+    "message": "Zamiast całkowicie usuwać komentarz z widoku, pokazuje kompaktowy pasek z przyciskiem „Pokaż komentarz”. Dotyczy filtrów długości i pustych pochwał."
+  },
+  "collapseHelpSummary": {
+    "message": "Jak działa tryb spoilera?"
+  },
+  "collapseHelpP1": {
+    "message": "Ta opcja <strong>nie wykrywa spoilerów fabularnych</strong>. Zmienia jedynie sposób prezentacji komentarzy, które i tak zostałyby odfiltrowane przez regułę minimalnej długości albo filtr pustych pochwał."
+  },
+  "collapseHelpP2": {
+    "message": "Gdy tryb jest wyłączony, taki komentarz znika z listy. Gdy tryb jest włączony, w jego miejscu pozostaje mały pasek informujący o przyczynie ukrycia oraz przycisk <strong>„Pokaż komentarz”</strong>."
+  },
+  "collapseHelpP3": {
+    "message": "Po rozwinięciu komentarza przycisk zmienia się na <strong>„Zwiń komentarz”</strong>, więc treść można dowolnie pokazywać i ponownie chować — podobnie jak spoiler na forach phpBB."
+  },
+  "save": {
+    "message": "Zapisz"
+  },
+  "resetDefaults": {
+    "message": "Przywróć domyślne"
+  },
+  "pause": {
+    "message": "Pauza"
+  },
+  "resume": {
+    "message": "Wznów"
+  },
+  "disabled": {
+    "message": "Wyłączone"
+  },
+  "filterActive": {
+    "message": "Filtrowanie aktywne"
+  },
+  "filterPaused": {
+    "message": "Filtrowanie wstrzymane"
+  },
+  "disabledInSettings": {
+    "message": "Rozszerzenie wyłączone w ustawieniach"
+  },
+  "pauseDisabledHint": {
+    "message": "Przycisk Pauza nie zmienia głównego przełącznika rozszerzenia. Włącz je w ustawieniach."
+  },
+  "pausePausedHint": {
+    "message": "Komentarze są obecnie pokazywane bez filtrowania. Kliknij, aby wznowić."
+  },
+  "pauseActiveHint": {
+    "message": "Kliknij, aby natychmiast pokazać wszystkie odfiltrowane komentarze."
+  },
+  "resumeTitle": {
+    "message": "Wznów filtrowanie"
+  },
+  "pauseTitle": {
+    "message": "Wstrzymaj filtrowanie"
+  },
+  "disabledTitle": {
+    "message": "Rozszerzenie jest wyłączone w ustawieniach"
+  },
+  "globalBlockedLabel": {
+    "message": "zablokowanych komentarzy od instalacji"
+  },
+  "globalBlockedTitle": {
+    "message": "Łączna liczba komentarzy odfiltrowanych przez CommentBlock od rozpoczęcia zliczania"
+  },
+  "settingsButton": {
+    "message": "Ustawienia…"
+  },
+  "summaryMasterOff": {
+    "message": "Główny przełącznik rozszerzenia jest wyłączony."
+  },
+  "summaryPaused": {
+    "message": "Pauza nie zmienia ustawień filtrów — po wznowieniu wrócą w poprzednim stanie."
+  },
+  "summaryNoRules": {
+    "message": "Brak aktywnych reguł filtrowania."
+  },
+  "summaryActivePrefix": {
+    "message": "Aktywne: "
+  },
+  "summaryCollapsed": {
+    "message": " Odfiltrowane komentarze są zwijane."
+  },
+  "summaryMin": {
+    "message": "minimum {0} znaków"
+  },
+  "summaryPraise": {
+    "message": "pochlebstwa (próg {0} traf.)"
+  },
+  "thresholdEvery": {
+    "message": "{0} — każde pojedyncze trafienie wystarcza"
+  },
+  "thresholdVeryHigh": {
+    "message": "{0} — bardzo wysoka czułość"
+  },
+  "thresholdHigh": {
+    "message": "{0} — wysoka czułość"
+  },
+  "thresholdMedium": {
+    "message": "{0} — średnia czułość"
+  },
+  "thresholdLow": {
+    "message": "{0} — niska czułość"
+  },
+  "thresholdVeryLow": {
+    "message": "{0} — bardzo niska czułość"
+  },
+  "thresholdManual": {
+    "message": "{0} — próg ręczny (powyżej zakresu suwaka)"
+  },
+  "oneRule": {
+    "message": "1 reguła"
+  },
+  "manyRules": {
+    "message": "{0} reguł"
+  },
+  "never": {
+    "message": "nigdy"
+  },
+  "noConfiguredUrls": {
+    "message": "Brak skonfigurowanych adresów URL."
+  },
+  "notDownloadedYet": {
+    "message": "Nie pobrano jeszcze tej listy."
+  },
+  "rulesUpdated": {
+    "message": "{0} • aktualizacja: {1}"
+  },
+  "toggleList": {
+    "message": "Włącz / wyłącz tę listę"
+  },
+  "enableNamedList": {
+    "message": "Włącz listę {0}"
+  },
+  "remove": {
+    "message": "Usuń"
+  },
+  "unnamedList": {
+    "message": "Lista bez nazwy"
+  },
+  "rulesImported": {
+    "message": "{0} • wczytano: {1}"
+  },
+  "listRemoved": {
+    "message": "Usunięto wczytaną listę."
+  },
+  "savedOk": {
+    "message": "Zapisano. Duże listy są przechowywane lokalnie bez limitu 8 KB na element."
+  },
+  "saveInvalidUrl": {
+    "message": "Nie zapisano: nieprawidłowy adres listy: {0}"
+  },
+  "saveError": {
+    "message": "Błąd zapisu: {0}"
+  },
+  "resetOk": {
+    "message": "Przywrócono ustawienia domyślne i usunięto dodatkowe listy."
+  },
+  "resetError": {
+    "message": "Nie udało się przywrócić ustawień: {0}"
+  },
+  "invalidUrl": {
+    "message": "Nieprawidłowy URL: {0}"
+  },
+  "noUrlsToDownload": {
+    "message": "Brak adresów list do pobrania."
+  },
+  "downloadingLists": {
+    "message": "Pobieranie list…"
+  },
+  "permissionDenied": {
+    "message": "Nie przyznano dostępu do domen list zewnętrznych."
+  },
+  "downloadTimeout": {
+    "message": "Przekroczono czas pobierania."
+  },
+  "downloadError": {
+    "message": "Błąd pobierania"
+  },
+  "updatedLists": {
+    "message": "Zaktualizowano {0} list."
+  },
+  "updatedListsWithErrors": {
+    "message": "Zaktualizowano {0}; błędy: {1}. Zachowano poprzednie kopie, jeśli były."
+  },
+  "genericError": {
+    "message": "Błąd: {0}"
+  },
+  "fileTooLarge": {
+    "message": "plik przekracza 5 MB"
+  },
+  "fileEmpty": {
+    "message": "plik jest pusty"
+  },
+  "fileReadError": {
+    "message": "błąd odczytu"
+  },
+  "importedOne": {
+    "message": "Wczytano {0} listę."
+  },
+  "importedMany": {
+    "message": "Wczytano {0} listy."
+  },
+  "importedWithErrors": {
+    "message": "Wczytano {0}; błędy: {1}"
+  },
+  "listTooLarge": {
+    "message": "lista przekracza 5 MB"
+  },
+  "emptyList": {
+    "message": "pusta lista"
+  },
+  "hiddenLength": {
+    "message": "Komentarz ukryty przez filtr długości"
+  },
+  "hiddenPraise": {
+    "message": "Komentarz ukryty przez filtr pochlebstw"
+  },
+  "hiddenGeneric": {
+    "message": "Komentarz ukryty przez filtr"
+  },
+  "showComment": {
+    "message": "Pokaż komentarz"
+  },
+  "collapseComment": {
+    "message": "Zwiń komentarz"
+  },
+  "expandedSuffix": {
+    "message": " — rozwinięty"
+  }
+}
