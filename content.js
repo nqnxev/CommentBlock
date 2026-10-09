@@ -199,16 +199,39 @@
   }
 
   function isReplyComment(comment) {
-    // YouTube grupuje komentarz główny oraz jego odpowiedzi wewnątrz
-    // ytd-comment-thread-renderer. Pierwszy komentarz w takim wątku jest
-    // komentarzem nadrzędnym; kolejne są odpowiedziami. Dodatkowy test
-    // ytd-comment-replies-renderer zabezpiecza nas na wypadek zmian DOM YouTube.
-    const thread = comment.closest('ytd-comment-thread-renderer');
-    if (!thread) return Boolean(comment.closest('ytd-comment-replies-renderer'));
+    // YouTube uses more than one DOM layout for replies. In the current layout
+    // replies may be rendered as nested ytd-comment-thread-renderer elements,
+    // so "first comment in the nearest thread" is NOT sufficient: a nested
+    // reply can itself be the first comment of its own sub-thread.
+    //
+    // Detect a reply using explicit reply containers first, then by checking
+    // whether the nearest thread is nested inside another comment thread.
+    if (comment.closest('ytd-comment-replies-renderer')) return true;
 
+    const repliesHost = comment.closest('#replies');
+    if (repliesHost?.closest('ytd-comment-thread-renderer')) return true;
+
+    // Newer YouTube layouts use sub-thread wrappers for nested replies.
+    if (comment.closest('.ytSubThreadSubThreadContent, #collapsed-threads')) return true;
+
+    const thread = comment.closest('ytd-comment-thread-renderer');
+    if (!thread) return false;
+
+    const parentThread = thread.parentElement?.closest('ytd-comment-thread-renderer');
+    if (parentThread) return true;
+
+    // In the classic layout the top-level comment is usually the direct
+    // #comment child of ytd-comment-thread-renderer. If we can identify it,
+    // use that as the authoritative top-level marker.
+    const directCommentHost = thread.querySelector(':scope > #comment');
+    if (directCommentHost && (directCommentHost === comment || directCommentHost.contains(comment))) {
+      return false;
+    }
+
+    // Fallback for layouts without #comment. Only consider a comment top-level
+    // when it is the first comment of a NON-nested thread.
     const firstComment = thread.querySelector(COMMENT_SELECTOR);
-    if (!firstComment) return Boolean(comment.closest('ytd-comment-replies-renderer'));
-    return firstComment !== comment;
+    return Boolean(firstComment && firstComment !== comment);
   }
 
   function getHideTarget(comment) {
